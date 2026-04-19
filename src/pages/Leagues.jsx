@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { MapPin, Calendar, Users, Trophy } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -10,12 +10,13 @@ export default function Leagues() {
     // Load from local storage or use defaults
     const stored = localStorage.getItem('jabodetabek_leagues');
     if (stored) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLeagues(JSON.parse(stored));
     } else {
       const defaultLeagues = [
-        { id: 1, name: 'Jakarta Super Cup 2026', location: 'Jakarta Selatan', date: '20 May 2026', fee: 'Rp 500.000', quota: 16, registered: 12 },
-        { id: 2, name: 'Bekasi Patriot League', location: 'Bekasi Barat', date: '15 Jun 2026', fee: 'Rp 350.000', quota: 32, registered: 20 },
-        { id: 3, name: 'Depok Student Cup', location: 'Margonda, Depok', date: '01 Jul 2026', fee: 'Rp 200.000', quota: 16, registered: 16 },
+        { id: 1, name: 'Jakarta Super Cup 2026', location: 'Tangerang', date: '20 May 2026', fee: 'Rp 500.000', quota: 16, registered: 12 },
+        { id: 2, name: 'Bekasi Patriot League', location: 'Tangerang', date: '15 Jun 2026', fee: 'Rp 350.000', quota: 32, registered: 20 },
+        { id: 3, name: 'Depok Student Cup', location: 'Tangerang', date: '01 Jul 2026', fee: 'Rp 200.000', quota: 16, registered: 16 },
       ];
       localStorage.setItem('jabodetabek_leagues', JSON.stringify(defaultLeagues));
       setLeagues(defaultLeagues);

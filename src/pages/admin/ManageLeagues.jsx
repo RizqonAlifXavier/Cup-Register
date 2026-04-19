@@ -6,6 +6,7 @@ export default function ManageLeagues() {
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('jabodetabek_leagues') || '[]');
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLeagues(stored);
   }, []);
 

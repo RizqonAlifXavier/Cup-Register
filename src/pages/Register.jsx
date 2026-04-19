@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -21,6 +21,7 @@ export default function Register() {
   useEffect(() => {
     const stored = localStorage.getItem('jabodetabek_leagues');
     if (stored) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLeagues(JSON.parse(stored));
     }
   }, []);

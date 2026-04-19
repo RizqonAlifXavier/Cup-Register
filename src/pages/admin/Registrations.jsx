@@ -6,6 +6,7 @@ export default function Registrations() {
   const [leagues, setLeagues] = useState([]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setRegistrations(JSON.parse(localStorage.getItem('jabodetabek_registrations') || '[]'));
     setLeagues(JSON.parse(localStorage.getItem('jabodetabek_leagues') || '[]'));
   }, []);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { Trophy, Users, CheckCircle, Clock } from 'lucide-react';
 
 export default function Dashboard() {
@@ -14,6 +14,7 @@ export default function Dashboard() {
     const leagues = JSON.parse(localStorage.getItem('jabodetabek_leagues') || '[]');
     const registrations = JSON.parse(localStorage.getItem('jabodetabek_registrations') || '[]');
     
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setStats({
       totalLeagues: leagues.length,
       totalTeams: registrations.length,
